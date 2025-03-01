@@ -28,8 +28,8 @@ jobs:
     with:
         context: .
         push: true
-        tags: ${{ DOCKERHUB_USERNAME }}/${{ env.imageName }}:latest
+        tags: ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.imageName }}:latest
   - name: Deploy the Image
     run: |
-     docker run -d -P ${{ DOCKERHUB_USERNAME }}/${{ env.imageName }}:latest
+     docker run -d -P ${{ secrets.DOCKERHUB_USERNAME }}/${{ env.imageName }}:latest
      docker ps -a
