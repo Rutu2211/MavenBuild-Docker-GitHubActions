@@ -3,7 +3,7 @@ on: push
 jobs:
  CICDjob:
   env:
-   imagename: "myjavaapp"
+   imageName: "myjavaapp"
   runs-on: ubuntu-latest
   steps:
   - name: Clone the current repository on the runner
